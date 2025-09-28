@@ -7,46 +7,100 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-# 📝 To-Do APP
+Task Manager App Backend
 
-A simple and functional task management application built with Laravel. Users can register, log in, and manage their personal to-do list by adding, editing, or deleting tasks. The app offers a clean UI using Bootstrap and secure authentication via Laravel middleware.
+Το backend της εφαρμογής Task Manager είναι χτισμένο με το Laravel
+, ένα δημοφιλές PHP framework για την ανάπτυξη σύγχρονων web εφαρμογών. Το έργο παρέχει ένα API για τη διαχείριση εργασιών, χρηστών και ρόλων, ιδανικό για προσωπική ή επαγγελματική χρήση.
 
----
+🚀 Χαρακτηριστικά
 
-## 🚀 Features
+Διαχείριση Χρηστών: Δημιουργία, επεξεργασία και διαγραφή χρηστών.
 
-- ✅ User registration & login
-- 🗂️ Add / Edit / Delete tasks
-- 🔍 Search tasks by title or description
-- 🎯 Filter tasks by status (pending, completed)
-- ⏰ Display task creation time in a human-friendly format (e.g. "2 hours ago")
-- 📊 Task list enhanced with DataTables for pagination, sorting, and instant search
-- 🎨 Responsive UI with Bootstrap 5
-- 🔐 Route protection via Laravel middleware
+Διαχείριση Εργασιών: Δημιουργία, ενημέρωση, διαγραφή και ανάκτηση εργασιών.
 
----
+Ρόλοι Χρηστών: Υποστήριξη διαφορετικών ρόλων χρηστών με περιορισμένα δικαιώματα.
 
-## ⚙️ Technologies
+Ασφαλής Αυθεντικοποίηση: Χρήση JWT (JSON Web Tokens) για ασφαλή έλεγχο ταυτότητας.
 
-- **PHP 8.x**
-- **Laravel 10.x**
-- **MySQL**
-- **Bootstrap 5**
-- **Blade Templating**
-- **jQuery & DataTables**
+Δοκιμές: Περιλαμβάνονται μονάδες δοκιμών για βασικές λειτουργίες του API.
 
----
+🛠️ Τεχνολογίες
 
-## 🔧 Installation Instructions
+PHP 8.1+
 
-```bash
-git clone https://github.com/PanagiotisSinanis/To-Do-APP.git
-cd To-Do-APP
+Laravel 9.x
+
+MySQL ή MariaDB
+
+Composer
+
+PHPUnit για δοκιμές
+
+📦 Εγκατάσταση
+
+Κλωνοποιήστε το αποθετήριο:
+
+git clone https://github.com/PanagiotisSinanis/Task-Manager-App-Backend.git
+cd Task-Manager-App-Backend
+
+
+Εγκαταστήστε τις εξαρτήσεις με Composer:
+
 composer install
+
+
+Δημιουργήστε το αρχείο περιβαλλοντικών μεταβλητών:
+
 cp .env.example .env
-php artisan key:generate
-# Edit your .env with DB credentials
+
+
+Ρυθμίστε τη βάση δεδομένων στο αρχείο .env:
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=task_manager
+DB_USERNAME=root
+DB_PASSWORD=
+
+
+Δημιουργήστε το σχήμα της βάσης δεδομένων:
+
 php artisan migrate
-npm install
+
+
+(Προαιρετικά) Γεμίστε τη βάση δεδομένων με ψεύτικα δεδομένα:
+
+php artisan db:seed
+
+
+Ξεκινήστε τον ενσωματωμένο διακομιστή ανάπτυξης:
+
+php artisan serve
+
+
+Η εφαρμογή θα είναι διαθέσιμη στη διεύθυνση http://localhost:8000.
+
+🧪 Δοκιμές
+
+Για να εκτελέσετε τις μονάδες δοκιμών:
+
+php artisan test
+
+📄 Τεκμηρίωση API
+
+Η τεκμηρίωση του API είναι διαθέσιμη στο αρχείο docs/API.md. Περιλαμβάνει:
+
+Λίστα όλων των διαθέσιμων endpoints.
+
+Παραδείγματα αιτημάτων και απαντήσεων.
+
+Περιγραφές παραμέτρων και κωδικών κατάστασης HTTP.
+
+📌 Σημειώσεις
+
+Το έργο είναι ακόμα υπό ανάπτυξη. Ενδέχεται να υπάρχουν αλλαγές στο API ή στη δομή της βάσης δεδομένων.
+
+Για οποιεσδήποτε ερωτήσεις ή προτάσεις, παρακαλούμε ανοίξτε ένα issue.
 npm run dev
 php artisan serve
